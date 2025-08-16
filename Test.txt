@@ -1,0 +1,7 @@
+var gr = new GlideRecord('cim_credentials');
+if(gr.get('4532f7af47679254ff711930116d43e2'))
+{
+var Encrypter = new GlideEncrypter();
+var decrypted = Encrypter.decrypt(gr.password);
+gs.print(decrypted);
+}
